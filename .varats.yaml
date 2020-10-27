@@ -1,0 +1,128 @@
+artefacts:
+    artefacts_dir:
+        default: null
+        desc: Folder for generated artefacts
+        value: null
+benchbuild_root:
+    default: null
+    desc: Root folder to run BenchBuild in
+    value: /home/ajay/Documents/Programs/Forked_VARA/VaRA-Tool-Suite/benchbuild
+config_file:
+    default: null
+    desc: Config file path of varats. Not guaranteed to exist.
+    value: /home/ajay/Documents/Programs/Forked_VARA/VaRA-Tool-Suite/.varats.yaml
+data_cache:
+    default: data_cache
+    desc: Local data cache to store preprocessed files.
+    value: data_cache
+db:
+    connect_string:
+        default: sqlite://
+        desc: sqlalchemy connect string
+        value: sqlite://
+    create_functions:
+        default: false
+        desc: Should we recreate our SQL functions from scratch?
+        value: false
+    rollback:
+        default: false
+        desc: Rollback all operations after benchbuild completes.
+        value: false
+env:
+    default: {}
+    desc: The environment benchbuild's commands should operate in.
+    value: {}
+experiment:
+    file_status_blacklist:
+        default:
+        - Success
+        - Blocked
+        desc: Do not include revision with these file status for benchbuild processing
+        value:
+        - Success
+        - Blocked
+    file_status_whitelist:
+        default: []
+        desc: Only include revision with these file status for benchbuild processing
+        value: []
+    only_missing:
+        default: true
+        desc: Only run missing version [Deprecated]This option is replaced by file_status_blacklist
+            = [Success]
+        value: true
+    random_order:
+        default: false
+        desc: Randomize the order of versions to explore.
+        value: false
+    sample_limit:
+        default: null
+        desc: Randomize the order of versions to explore.
+        value: null
+ml: {}
+paper_config:
+    current_config:
+        default: null
+        desc: Paper config file to load.
+        value: phasar_intermono
+    folder:
+        default: null
+        desc: Folder with paper configs.
+        value: /home/ajay/Documents/Programs/Forked_VARA/VaRA-Tool-Suite/paper_configs
+phasar:
+    developer_version:
+        default: true
+        desc: Setup phasar as development build.
+        value: true
+    install_dir:
+        default: null
+        desc: Phasar install directory
+        value: null
+    source_dir:
+        default: null
+        desc: Phasar source directory
+        value: null
+plots:
+    plot_dir:
+        default: null
+        desc: Folder for generated plots
+        value: /home/ajay/Documents/Programs/Forked_VARA/VaRA-Tool-Suite/plots
+provider:
+    github_access_token:
+        default: null
+        desc: GitHub access token
+        value: null
+result_dir:
+    default: null
+    desc: Result folder for collected results
+    value: /home/ajay/Documents/Programs/Forked_VARA/VaRA-Tool-Suite/results
+sampling: {}
+tables:
+    table_dir:
+        default: null
+        desc: Folder for generated tables
+        value: /home/ajay/Documents/Programs/Forked_VARA/VaRA-Tool-Suite/tables
+vara:
+    developer_version:
+        default: true
+        desc: Setup VaRA as development build.
+        value: true
+    llvm_install_dir:
+        default: null
+        desc: Install dir for LLVM and VaRA
+        value: null
+    llvm_source_dir:
+        default: null
+        desc: LLVM source dir
+        value: null
+    own_libgit2:
+        default: true
+        desc: Build own libgit2 [Deprecated]
+        value: true
+    version:
+        default: 100
+        desc: VaRA version.
+        value: 100
+    with_phasar:
+        default: true
+        desc: Include Phasar for static analysis [Deprecated]
+        value: true

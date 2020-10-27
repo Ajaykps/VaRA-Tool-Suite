@@ -1,0 +1,9 @@
+DocType: CaseStudy
+Version: 1
+---
+project_name: gzip
+stages:
+- revisions:
+  - commit_hash: 48b82abe3a300f37c814ab89b648ac7af2e9d14b
+    commit_id: 586
+version: 0
